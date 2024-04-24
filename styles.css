@@ -1,0 +1,59 @@
+/* Flex only affects DIRECT children when applied to a parent container
+   For example: Parent 1 has flex, only child 1 will be affected
+*/
+
+body {
+    background-color: black;     
+  }
+  
+  /* Parent */
+  .post {
+    margin: 0 auto;
+    background-color: white;
+    height: 800px;
+    width: 750px;
+  }
+  
+  /* Child 1 */
+  #header {
+    padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Grandchild 1 */
+  .left-side {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  /* Great Grandchild 1 */
+  .html-icon {
+    font-size: 2.3rem;
+  }
+  
+  /* Great Grandchild 2 */
+  .header-text {
+  font-size: 10px;
+  }
+  
+  /* Object-fit deals with images, fill: fills the available space only regarding the image size */
+  .post-image > img {
+    object-fit: fill;
+  }
+  
+  #body-content {
+    padding: 0.5rem;
+  }
+  
+  .icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .body-text {
+  font-size: 24px;
+  }
